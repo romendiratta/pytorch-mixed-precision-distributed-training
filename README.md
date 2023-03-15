@@ -31,3 +31,7 @@ In both DDP notebooks, again the same PyTorch training and validation loops are 
 
 ### Conclusion
 Mixed precision training can provide some speedup as the training time dropped by ~19 percent. In the case of distributed training, there was a speedup of ~47%. This is what is expected as the data was now split across two nodes while the models trained in parallel. A perfect 50% speedup is not expected because of overhead. 
+
+
+
+
