@@ -29,8 +29,6 @@ Training for one epoch took ~24 minutes.
 ### Distributed Training (DDP)
 In both DDP notebooks, again the same the same PyTorch training and validation loops are used from the baseline. Instead PyTorch DDP is first intialized in each notebook respectively. Next a <code>DistributedSampler</code> is used to ensure that data is spread across each node during training. Finally, the models are wrapped in <code>DistributedDataParallel</code> to sync the models during training. Training for one epoch took ~18 minutes.
 
-<br>
-
 ### Conclusion
 It is apparent that mixed precision training can provided some speedup as the training time dropped by ~19 percent. In the case of distributed training there was a speedup of ~47%. This is what is expected as the data was now split across two nodes while the models trained in paralell. A perfect ~50 speedup is not expected because of overhead. 
 
